@@ -1,1 +1,5 @@
 version,author,changed_artifact,artifact_version,prompt_hash,tools_hash,reason,hypothesis,metric_before,metric_after,run_file
+v0,Bao Hoang Thien Phuc,baseline,v0+p8e562c61a1ac+t8344e3a225df,p8e562c61a1ac,t8344e3a225df,OpenAI gpt-4o-mini baseline sau setup,Thiết lập mốc đo routing và argument,NA,0.85,runs/v0_B_base_openai_20261110T203907945983.json
+v1,Bao Hoang Thien Phuc,artifacts/system_prompt.md,v1+p4b99e12e25cf+t8344e3a225df,p4b99e12e25cf,t8344e3a225df,Thêm hướng dẫn response_type và boundary xác nhận,Nhắc rõ cấu trúc clarify sẽ sửa lỗi gửi trước xác nhận,0.85,0.90,runs/v1_B_base_openai_20261110T204004299242.json
+v2,Bao Hoang Thien Phuc,artifacts/system_prompt.md,v2+p560c890bb424+t8344e3a225df,p560c890bb424,t8344e3a225df,Ưu tiên instruction mới nhất trong multi-turn,Explicit switch Twitter sang web sẽ sửa lỗi chọn sai tool,0.90,0.95,runs/v2_B_base_openai_20261110T204046331049.json
+v3,Bao Hoang Thien Phuc,artifacts/system_prompt.md,v3+p9eec9231c2e6+t8344e3a225df,p9eec9231c2e6,t8344e3a225df,Bắt buộc response_type=text cho clarify thông tin,Model sẽ truyền đủ arg response_type khi hỏi URL,0.95,1.00,runs/v3_B_base_openai_20261110T204135078595.json

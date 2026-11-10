@@ -1,0 +1,293 @@
+{
+  "transcript_id": "v3_openai_20261110T210013336905",
+  "version": "v3",
+  "artifact_version": "v3+p935635c86db3+t8344e3a225df",
+  "prompt_hash": "935635c86db396d8b6bee6f6e48dcdb453a751f49575bfd2d821612c036fb1a6",
+  "tools_hash": "8344e3a225dfe076f604e68af9cc6544fd52f58493f034caab38df41b5b23f0c",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "system_prompt": "/Users/phucbao/Documents/Pythons/K5-L3A-DAY03-NhomCuaCat-ResearchAgentToolEval/starter_v0/artifacts/system_prompt.md",
+  "tools": "/Users/phucbao/Documents/Pythons/K5-L3A-DAY03-NhomCuaCat-ResearchAgentToolEval/starter_v0/artifacts/tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-11-10T21:00:13",
+  "updated_at": "2026-11-10T21:00:31",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-11-10T21:00:13",
+      "user": "Tin tức AI hôm nay có gì nổi bật?",
+      "status": "answered",
+      "assistant_text": "Dưới đây là một số tin tức nổi bật về AI hôm nay:\n\n1. **[TrendsWatching To Live or Die in AI – American Alliance of Museums](https://www.aam-us.org/2026/11/10/trendswatching-to-live-or-die-in-ai)**: Bài viết thảo luận về vai trò của AI trong việc cải thiện công việc, chăm sóc sức khỏe và giải quyết các vấn đề lớn, nhưng cũng cảnh báo về khả năng AI có thể khuếch đại thiên kiến và gây ra sự bất bình đẳng.\n\n2. **[AI is making it harder to detect fake emergency calls : NPR](https://www.npr.org/2026/11/10/nx-s1-5971477/ai-is-making-it-harder-to-detect-fake-emergency-calls)**: Công nghệ AI đang làm cho việc phát hiện các cuộc gọi khẩn cấp giả mạo trở nên khó khăn hơn, khi nó được sử dụng để tạo ra các cuộc gọi swatting đáng tin cậy.\n\n3. **[Darren Hick talks legal, ethical, moral issues surrounding AI - News](https://www.furman.edu/news/darren-hick-talks-legal-ethical-moral-issues-surrounding-ai)**: Darren Hick chia sẻ về những vấn đề pháp lý và đạo đức liên quan đến AI, đặc biệt là khi các mô hình ngôn ngữ lớn được đào tạo trên sách của ông.\n\n4. **[Google touts AI breakthrough, path to \"unhackable\" software](https://www.axios.com/2026/11/10/google-code-verification-signal)**: Google DeepMind đã sử dụng AI để xác minh mã hóa của Signal, tạo ra hơn 3 triệu dòng chứng minh toán học, mở ra khả năng phát triển phần mềm không thể bị hack.\n\n5. **[House House clarifies use of AI tools in Big Walk's \"final stage of development\" | GamesIndustry.biz](https://www.gamesindustry.biz/house-house-clarifies-use-of-ai-tools-in-big-walks-final-stage-of-development)**: Studio House House đã làm rõ việc sử dụng công cụ AI trong quá trình phát triển trò chơi Big Walk, nhấn mạnh rằng họ đã sử dụng AI một cách hạn chế để giải quyết các thách thức kỹ thuật.\n\nNếu bạn cần thêm thông tin chi tiết về bất kỳ bài viết nào, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "AI",
+                "topic": "news",
+                "timeframe": "day"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "AI",
+                "topic": "news",
+                "timeframe": "day"
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "AI",
+                "topic": "news",
+                "timeframe": "day",
+                "items": [
+                  {
+                    "title": "TrendsWatching To Live or Die in AI – American Alliance of Museums",
+                    "url": "https://www.aam-us.org/2026/11/10/trendswatching-to-live-or-die-in-ai",
+                    "source": "aam-us.org",
+                    "summary": "So is AI a tool that’s going to, you know, make work easier and improve health care and fuel new discoveries and improve accessibility and tackle big issues. Is it gonna turn out to be a tool that amplifies bias and steals creative out and destroys jobs and manipulates opinion and accelerates wealth and equality. [...] Now this gap between our effective estimate of short term and long-term impact is particularly huge when it comes to artificial intelligence. Because of the current speed of acceleration and the large amount of uncertainty around its impact in its funding model and potential regulation.\n\nAnd this has led to widespread confusion about what AI might mean for people generally, for society, and for each of us personally. [...] And how are you ever going to be able to take care of all of that massive amounts of stuff that you’re collecting?\n\nThese are some shots from the National Museum of American the Smithsonian.\n\nWell, maybe AI means we actually can have a few in which there’s no backlog. We can actually catch up with the massive amounts of specimens that we collect, whether you’re a natural history museum, whether you’re an archive, whether you’re an art museum that has a lot of stuff in storage.",
+                    "score": 0.3669078
+                  },
+                  {
+                    "title": "AI is making it harder to detect fake emergency calls : NPR",
+                    "url": "https://www.npr.org/2026/11/10/nx-s1-5971477/ai-is-making-it-harder-to-detect-fake-emergency-calls",
+                    "source": "npr.org",
+                    "summary": "Jaclyn Diaz\n\nIt's getting harder to detect fake emergency calls thanks to AI. The tech is being used to generate believable swatting calls to law enforcement that claim a shooting or other crime is taking place.\n\nNPR does not offer or accept money for coverage or interviews.  \n Anyone who makes such an offer or request is not an NPR employee and does not represent NPR. [...] Accessibility links\n\n Keyboard shortcuts for audio player\n\nAI is making it harder to detect fake emergency calls It's getting harder to detect fake emergency calls thanks to AI. The tech is being used to generate believable swatting calls to law enforcement that claim a shooting or other crime is taking place.\n\n### Artificial Intelligence\n\n# AI is making it harder to detect fake emergency calls\n\nJaclyn Diaz",
+                    "score": 0.25530696
+                  },
+                  {
+                    "title": "Darren Hick talks legal, ethical, moral issues surrounding AI - News",
+                    "url": "https://www.furman.edu/news/darren-hick-talks-legal-ethical-moral-issues-surrounding-ai",
+                    "source": "furman.edu",
+                    "summary": "Hick commented on how AI has impacted him personally with large language models training on his books, and while producing his newest book, the temptation he faced to rely on the technology. “I’ve just published a book, and the siren song for using AI was really sweet for this thing, he said. “AI says, why are you struggling through that? Why don’t you just let me write that paragraph for you? And the answer is because I don’t need another book. The point of writing this was to figure out what [...] to figure out what my own thoughts were on it, and AI can’t help me with that,” Hick added. [...] We use cookies to improve your experience on our site. By continuing to browse, you agree to our use of cookies. You can learn more by reading our Privacy Policy.",
+                    "score": 0.24839331
+                  },
+                  {
+                    "title": "Google touts AI breakthrough, path to \"unhackable\" software",
+                    "url": "https://www.axios.com/2026/11/10/google-code-verification-signal",
+                    "source": "axios.com",
+                    "summary": "To test the system, researchers reintroduced two previously fixed bugs into Signal's code. In both cases, the AI-powered framework generated mathematical proofs showing that the altered software was insecure.\n\nThe intrigue: But Chaudhuri told Axios that the AI lab's tools were able to accomplish this feat in just four weeks — compared to the years it would've likely taken humans alone. [...] Driving the news:Google DeepMind said Tuesday it used AI agents powered by its Gemini 4 Carbon model to mathematically verify that the code underpinning Signal's encryption is secure.\n\n   The agents generated more than 3 million lines of mathematical proofs in the process, allowing researchers to verify the software at a level of detail previously considered impractical. [...] Google DeepMind researchers have used AI to mathematically prove that the encryption code protecting billions of private messages works as intended.\n\nWhy it matters: The research breakthrough could eventually help defenders build better software. \"You can finally get to this world of unhackable software,\" said Swarat Chaudhuri, a research scientist at Google DeepMind.",
+                    "score": 0.23228444
+                  },
+                  {
+                    "title": "House House clarifies use of AI tools in Big Walk's \"final stage of development\" | GamesIndustry.biz",
+                    "url": "https://www.gamesindustry.biz/house-house-clarifies-use-of-ai-tools-in-big-walks-final-stage-of-development",
+                    "source": "gamesindustry.biz",
+                    "summary": "\"This year we are declining to vote for any game that uses generative AI in any capacity. We urge the IGF to adopt a strong anti-AI policy for future years that disallows games containing any AI-generated work.\"\n\nHouse House explained its use of AI tools, including the implementation of LLMs \"to research, via chatbots, issues encountered with third-party code.\" [...] undermine existing age-rating systems for video games SAG-AFTRA launches new video game agreement enabling devs to hire professional actors for demos and vertical slices Jobs roundup: November | Nordisk Games appoints Stefanía Halldórsdóttir as CEO and Ásgeir Kröyer as CFO Sega Q2 results exceed expectations, driven by surge in operating income for pachislot and pachinko machines Unity reports \"strongest ever\" Q3 results driven by its AI-powered ad network Vector [...] Published on\n\nHouse House has clarified it used AI tools \"sparingly\" during the \"final stretch of development\" on Big Walk to address \"difficult technical challenges and bugs.\"\n\nThe Australian indie studio released a statement to  Aftermath after a group of jurors for the 2027 Independent Games Festival (IGF) said they would not vote for any game developed with generative AI.",
+                    "score": 0.17694198
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Dưới đây là một số tin tức nổi bật về AI hôm nay:\n\n1. **[TrendsWatching To Live or Die in AI – American Alliance of Museums](https://www.aam-us.org/2026/11/10/trendswatching-to-live-or-die-in-ai)**: Bài viết thảo luận về vai trò của AI trong việc cải thiện công việc, chăm sóc sức khỏe và giải quyết các vấn đề lớn, nhưng cũng cảnh báo về khả năng AI có thể khuếch đại thiên kiến và gây ra sự bất bình đẳng.\n\n2. **[AI is making it harder to detect fake emergency calls : NPR](https://www.npr.org/2026/11/10/nx-s1-5971477/ai-is-making-it-harder-to-detect-fake-emergency-calls)**: Công nghệ AI đang làm cho việc phát hiện các cuộc gọi khẩn cấp giả mạo trở nên khó khăn hơn, khi nó được sử dụng để tạo ra các cuộc gọi swatting đáng tin cậy.\n\n3. **[Darren Hick talks legal, ethical, moral issues surrounding AI - News](https://www.furman.edu/news/darren-hick-talks-legal-ethical-moral-issues-surrounding-ai)**: Darren Hick chia sẻ về những vấn đề pháp lý và đạo đức liên quan đến AI, đặc biệt là khi các mô hình ngôn ngữ lớn được đào tạo trên sách của ông.\n\n4. **[Google touts AI breakthrough, path to \"unhackable\" software](https://www.axios.com/2026/11/10/google-code-verification-signal)**: Google DeepMind đã sử dụng AI để xác minh mã hóa của Signal, tạo ra hơn 3 triệu dòng chứng minh toán học, mở ra khả năng phát triển phần mềm không thể bị hack.\n\n5. **[House House clarifies use of AI tools in Big Walk's \"final stage of development\" | GamesIndustry.biz](https://www.gamesindustry.biz/house-house-clarifies-use-of-ai-tools-in-big-walks-final-stage-of-development)**: Studio House House đã làm rõ việc sử dụng công cụ AI trong quá trình phát triển trò chơi Big Walk, nhấn mạnh rằng họ đã sử dụng AI một cách hạn chế để giải quyết các thách thức kỹ thuật.\n\nNếu bạn cần thêm thông tin chi tiết về bất kỳ bài viết nào, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "AI",
+            "topic": "news",
+            "timeframe": "day"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "AI",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "TrendsWatching To Live or Die in AI – American Alliance of Museums",
+                "url": "https://www.aam-us.org/2026/11/10/trendswatching-to-live-or-die-in-ai",
+                "source": "aam-us.org",
+                "summary": "So is AI a tool that’s going to, you know, make work easier and improve health care and fuel new discoveries and improve accessibility and tackle big issues. Is it gonna turn out to be a tool that amplifies bias and steals creative out and destroys jobs and manipulates opinion and accelerates wealth and equality. [...] Now this gap between our effective estimate of short term and long-term impact is particularly huge when it comes to artificial intelligence. Because of the current speed of acceleration and the large amount of uncertainty around its impact in its funding model and potential regulation.\n\nAnd this has led to widespread confusion about what AI might mean for people generally, for society, and for each of us personally. [...] And how are you ever going to be able to take care of all of that massive amounts of stuff that you’re collecting?\n\nThese are some shots from the National Museum of American the Smithsonian.\n\nWell, maybe AI means we actually can have a few in which there’s no backlog. We can actually catch up with the massive amounts of specimens that we collect, whether you’re a natural history museum, whether you’re an archive, whether you’re an art museum that has a lot of stuff in storage.",
+                "score": 0.3669078
+              },
+              {
+                "title": "AI is making it harder to detect fake emergency calls : NPR",
+                "url": "https://www.npr.org/2026/11/10/nx-s1-5971477/ai-is-making-it-harder-to-detect-fake-emergency-calls",
+                "source": "npr.org",
+                "summary": "Jaclyn Diaz\n\nIt's getting harder to detect fake emergency calls thanks to AI. The tech is being used to generate believable swatting calls to law enforcement that claim a shooting or other crime is taking place.\n\nNPR does not offer or accept money for coverage or interviews.  \n Anyone who makes such an offer or request is not an NPR employee and does not represent NPR. [...] Accessibility links\n\n Keyboard shortcuts for audio player\n\nAI is making it harder to detect fake emergency calls It's getting harder to detect fake emergency calls thanks to AI. The tech is being used to generate believable swatting calls to law enforcement that claim a shooting or other crime is taking place.\n\n### Artificial Intelligence\n\n# AI is making it harder to detect fake emergency calls\n\nJaclyn Diaz",
+                "score": 0.25530696
+              },
+              {
+                "title": "Darren Hick talks legal, ethical, moral issues surrounding AI - News",
+                "url": "https://www.furman.edu/news/darren-hick-talks-legal-ethical-moral-issues-surrounding-ai",
+                "source": "furman.edu",
+                "summary": "Hick commented on how AI has impacted him personally with large language models training on his books, and while producing his newest book, the temptation he faced to rely on the technology. “I’ve just published a book, and the siren song for using AI was really sweet for this thing, he said. “AI says, why are you struggling through that? Why don’t you just let me write that paragraph for you? And the answer is because I don’t need another book. The point of writing this was to figure out what [...] to figure out what my own thoughts were on it, and AI can’t help me with that,” Hick added. [...] We use cookies to improve your experience on our site. By continuing to browse, you agree to our use of cookies. You can learn more by reading our Privacy Policy.",
+                "score": 0.24839331
+              },
+              {
+                "title": "Google touts AI breakthrough, path to \"unhackable\" software",
+                "url": "https://www.axios.com/2026/11/10/google-code-verification-signal",
+                "source": "axios.com",
+                "summary": "To test the system, researchers reintroduced two previously fixed bugs into Signal's code. In both cases, the AI-powered framework generated mathematical proofs showing that the altered software was insecure.\n\nThe intrigue: But Chaudhuri told Axios that the AI lab's tools were able to accomplish this feat in just four weeks — compared to the years it would've likely taken humans alone. [...] Driving the news:Google DeepMind said Tuesday it used AI agents powered by its Gemini 4 Carbon model to mathematically verify that the code underpinning Signal's encryption is secure.\n\n   The agents generated more than 3 million lines of mathematical proofs in the process, allowing researchers to verify the software at a level of detail previously considered impractical. [...] Google DeepMind researchers have used AI to mathematically prove that the encryption code protecting billions of private messages works as intended.\n\nWhy it matters: The research breakthrough could eventually help defenders build better software. \"You can finally get to this world of unhackable software,\" said Swarat Chaudhuri, a research scientist at Google DeepMind.",
+                "score": 0.23228444
+              },
+              {
+                "title": "House House clarifies use of AI tools in Big Walk's \"final stage of development\" | GamesIndustry.biz",
+                "url": "https://www.gamesindustry.biz/house-house-clarifies-use-of-ai-tools-in-big-walks-final-stage-of-development",
+                "source": "gamesindustry.biz",
+                "summary": "\"This year we are declining to vote for any game that uses generative AI in any capacity. We urge the IGF to adopt a strong anti-AI policy for future years that disallows games containing any AI-generated work.\"\n\nHouse House explained its use of AI tools, including the implementation of LLMs \"to research, via chatbots, issues encountered with third-party code.\" [...] undermine existing age-rating systems for video games SAG-AFTRA launches new video game agreement enabling devs to hire professional actors for demos and vertical slices Jobs roundup: November | Nordisk Games appoints Stefanía Halldórsdóttir as CEO and Ásgeir Kröyer as CFO Sega Q2 results exceed expectations, driven by surge in operating income for pachislot and pachinko machines Unity reports \"strongest ever\" Q3 results driven by its AI-powered ad network Vector [...] Published on\n\nHouse House has clarified it used AI tools \"sparingly\" during the \"final stretch of development\" on Big Walk to address \"difficult technical challenges and bugs.\"\n\nThe Australian indie studio released a statement to  Aftermath after a group of jurors for the 2027 Independent Games Festival (IGF) said they would not vote for any game developed with generative AI.",
+                "score": 0.17694198
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T21:00:23"
+    },
+    {
+      "turn_index": 2,
+      "started_at": "2026-11-10T21:00:23",
+      "user": "Tóm tắt bài này hộ mình",
+      "status": "waiting_for_user",
+      "assistant_text": "Bạn gửi URL bài viết giúp mình nhé?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "clarify",
+              "args": {
+                "question": "Bạn gửi URL bài viết giúp mình nhé?",
+                "response_type": "text"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "clarify",
+              "args": {
+                "question": "Bạn gửi URL bài viết giúp mình nhé?",
+                "response_type": "text"
+              },
+              "result": {
+                "tool": "ask_user",
+                "question": "Bạn gửi URL bài viết giúp mình nhé?",
+                "response_type": "text",
+                "options": [],
+                "awaiting_user": true
+              }
+            }
+          ]
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "clarify",
+          "args": {
+            "question": "Bạn gửi URL bài viết giúp mình nhé?",
+            "response_type": "text"
+          },
+          "result": {
+            "tool": "ask_user",
+            "question": "Bạn gửi URL bài viết giúp mình nhé?",
+            "response_type": "text",
+            "options": [],
+            "awaiting_user": true
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T21:00:25"
+    },
+    {
+      "turn_index": 3,
+      "started_at": "2026-11-10T21:00:25",
+      "user": "https://example.com",
+      "status": "answered",
+      "assistant_text": "Bài viết tại URL bạn cung cấp là về \"Example Domain\". Đây là một miền được sử dụng cho các ví dụ trong tài liệu mà không cần phải xin phép. Nội dung của miền này không phải là một dịch vụ, và người dùng được khuyến cáo không nên dựa vào nó cho các mục đích thử nghiệm và giám sát.\n\nNếu bạn cần thêm thông tin hoặc có câu hỏi khác, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "fetch",
+              "args": {
+                "url": "https://example.com"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "fetch",
+              "args": {
+                "url": "https://example.com"
+              },
+              "result": {
+                "tool": "read_url",
+                "url": "https://example.com",
+                "items": [
+                  {
+                    "title": "Example Domain",
+                    "url": "https://example.com",
+                    "source": "example.com",
+                    "summary": "This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.\n\nهذا النطاق مُخصص للاستخدام في أمثلة التوثيق دون الحاجة إلى إذن. هذه ليست خدمة، يُرجى تجنب الاعتماد عليها لأغراض الاختبار والمراقبة.\n\n该域名仅用于文档示例，无需获得许可。这并非一项服务，请勿将其用于测试和监控目的。\n\nL’usage de ce domaine est réservé à des exemples de documentation, sans autorisation préalable. Il ne s’agit pas d’un service ; son utilisation à des fins de test ou de surveillance est à éviter.\n\nДанный домен предназначен для использования в примерах документации без необходимости получения предварительного разрешения. Это не сервис; не рекомендуется его использование для тестирования и мониторинга.\n\nEste dominio está destinado al uso en ejemplos de documentación sin necesidad de permiso. Esto no es un servicio; evitar utilizarlo para realizar pruebas o monitoreos.\n\n [Learn more](https://iana.org/help/example-domains)"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Bài viết tại URL bạn cung cấp là về \"Example Domain\". Đây là một miền được sử dụng cho các ví dụ trong tài liệu mà không cần phải xin phép. Nội dung của miền này không phải là một dịch vụ, và người dùng được khuyến cáo không nên dựa vào nó cho các mục đích thử nghiệm và giám sát.\n\nNếu bạn cần thêm thông tin hoặc có câu hỏi khác, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "fetch",
+          "args": {
+            "url": "https://example.com"
+          },
+          "result": {
+            "tool": "read_url",
+            "url": "https://example.com",
+            "items": [
+              {
+                "title": "Example Domain",
+                "url": "https://example.com",
+                "source": "example.com",
+                "summary": "This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.\n\nهذا النطاق مُخصص للاستخدام في أمثلة التوثيق دون الحاجة إلى إذن. هذه ليست خدمة، يُرجى تجنب الاعتماد عليها لأغراض الاختبار والمراقبة.\n\n该域名仅用于文档示例，无需获得许可。这并非一项服务，请勿将其用于测试和监控目的。\n\nL’usage de ce domaine est réservé à des exemples de documentation, sans autorisation préalable. Il ne s’agit pas d’un service ; son utilisation à des fins de test ou de surveillance est à éviter.\n\nДанный домен предназначен для использования в примерах документации без необходимости получения предварительного разрешения. Это не сервис; не рекомендуется его использование для тестирования и мониторинга.\n\nEste dominio está destinado al uso en ejemplos de documentación sin necesidad de permiso. Esto no es un servicio; evitar utilizarlo para realizar pruebas o monitoreos.\n\n [Learn more](https://iana.org/help/example-domains)"
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T21:00:30"
+    },
+    {
+      "turn_index": 4,
+      "started_at": "2026-11-10T21:00:30",
+      "user": "Đăng bản digest này lên Telegram giúp mình",
+      "status": "answered",
+      "assistant_text": "Bạn có xác nhận muốn đăng nội dung này lên Telegram không? (Có/Không)",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "Bạn có xác nhận muốn đăng nội dung này lên Telegram không? (Có/Không)",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [],
+      "ended_at": "2026-11-10T21:00:31"
+    }
+  ]
+}

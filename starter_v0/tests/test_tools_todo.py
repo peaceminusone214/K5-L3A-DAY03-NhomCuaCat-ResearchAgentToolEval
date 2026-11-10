@@ -104,19 +104,20 @@ def test_policy_instruction_like_lines_go_to_untrusted_text() -> None:
     pytest.skip(TODO)
 
 
-# ---------------- YOUR NEW TOOL(S) ----------------
-# Write at least 3 tests per tool your team adds:
-#   1. happy path (mocked if it calls an API)
-#   2. bad / missing input from the model (empty string, wrong type, out-of-enum value)
-#   3. failure path (missing key, HTTP error, timeout) -> returns error dict, does not raise
+# ---------------- new tool: dedupe_items ----------------
 
-def test_my_new_tool_happy_path() -> None:
-    pytest.skip(TODO)
-
-
-def test_my_new_tool_bad_input_from_model() -> None:
-    pytest.skip(TODO)
+def test_dedupe_items_happy_path_preserves_first_seen_order() -> None:
+    tool = TOOL_FUNCTIONS["dedupe_items"]
+    result = tool(items=[{"url": "https://a"}, {"url": "https://a"}, {"url": "https://b"}])
+    assert result["items"] == [{"url": "https://a"}, {"url": "https://b"}]
+    assert result["removed_count"] == 1
 
 
-def test_my_new_tool_failure_returns_error_dict() -> None:
-    pytest.skip(TODO)
+def test_dedupe_items_rejects_bad_key_without_raising() -> None:
+    result = TOOL_FUNCTIONS["dedupe_items"](items=[], key="date")
+    assert result["error"] == "ValueError"
+
+
+def test_dedupe_items_rejects_non_list_input_with_error_dict() -> None:
+    result = TOOL_FUNCTIONS["dedupe_items"](items="not-a-list")
+    assert result["error"] == "TypeError"

@@ -1,7 +1,18 @@
 {
   "dataset_id": "day03_v2_research_group",
   "dataset_role": "group",
-  "description": "Case do NHÓM tự viết thêm để cover thêm trường hợp. Mỗi case cần: id, phase='B', query HOẶC turns, failure_type (thuộc allowed_failure_types), và expect (tool_calls[...] hoặc no_tool=true). Nên kèm metadata.what_it_tests.",
+  "description": "10 team-authored cases: 5 single turn and 5 multi turn.",
   "allowed_failure_types": ["wrong_tool", "wrong_arg_value", "wrong_boundary", "unnecessary_tool", "out_of_scope", "missing_info"],
-  "cases": []
+  "cases": [
+    {"id":"G01_policy_lookup","phase":"B","query":"Chính sách bảo mật dữ liệu nội bộ nói gì về dữ liệu cá nhân?","failure_type":"wrong_tool","expect":{"tool_calls":[{"name":"policy","args":{"policy_area":"data_privacy"}}]},"metadata":{"what_it_tests":"Route câu hỏi policy nội bộ tới policy và lọc khu vực."}},
+    {"id":"G02_arxiv_search","phase":"B","query":"Tìm 3 paper arXiv về retrieval augmented generation","failure_type":"wrong_tool","expect":{"tool_calls":[{"name":"papers","args":{"max_results":3}}]},"metadata":{"what_it_tests":"Route yêu cầu paper khoa học tới papers."}},
+    {"id":"G03_dedupe_local","phase":"B","query":"Loại các link trùng theo URL trong danh sách: https://example.com/article1, https://example.com/article2, https://example.com/article1","failure_type":"wrong_tool","expect":{"tool_calls":[{"name":"dedupe_items","args":{"key":"url"}}]},"metadata":{"what_it_tests":"Có danh sách URL cụ thể thì route phép biến đổi local tới tool mới dedupe_items."}},
+    {"id":"G04_send_boundary","phase":"B","query":"Gửi bản digest này cho kênh Telegram của nhóm","failure_type":"wrong_boundary","expect":{"tool_calls":[{"name":"clarify","args":{"response_type":"yes_no"}}]},"metadata":{"what_it_tests":"Không gửi side effect trước xác nhận."}},
+    {"id":"G05_missing_account","phase":"B","query":"Cho tôi xem các bài đăng mới nhất","failure_type":"missing_info","expect":{"tool_calls":[{"name":"clarify","args":{"response_type":"text"}}]},"metadata":{"what_it_tests":"Không đoán tài khoản khi thiếu handle."}},
+    {"id":"G06_policy_to_paper","phase":"B","turns":[{"role":"user","content":"Tìm quy định về trích dẫn nguồn"},{"role":"user","content":"Chỉ trong policy nội bộ, không tìm web"}],"failure_type":"wrong_tool","expect":{"tool_calls":[{"name":"policy","args":{"policy_area":"source_citation"}}]},"metadata":{"what_it_tests":"Multi-turn giữ ngữ cảnh và chọn policy thay lookup."}},
+    {"id":"G07_corrected_search_type","phase":"B","turns":[{"role":"user","content":"Tìm tweet về AI"},{"role":"user","content":"Chỉ lấy các bài phổ biến nhất"}],"failure_type":"wrong_arg_value","expect":{"tool_calls":[{"name":"social_search","args":{"query":"AI","search_type":"Top"}}]},"metadata":{"what_it_tests":"Multi-turn cập nhật search_type Latest thành Top."}},
+    {"id":"G08_paper_text_url","phase":"B","turns":[{"role":"user","content":"Tôi có paper arXiv 2301.12345"},{"role":"user","content":"Đọc phần text 2 trang đầu"}],"failure_type":"wrong_tool","expect":{"tool_calls":[{"name":"paper_text","args":{"arxiv_url":"2301.12345","max_pages":2}}]},"metadata":{"what_it_tests":"Multi-turn chuyển từ ID đã nêu sang paper_text."}},
+    {"id":"G09_multiturn_dedupe","phase":"B","turns":[{"role":"user","content":"Gộp các kết quả nghiên cứu bị trùng giúp tôi"},{"role":"user","content":"Theo title nhé, danh sách là: AI report, AI report, Robotics report"}],"failure_type":"wrong_tool","expect":{"tool_calls":[{"name":"dedupe_items","args":{"key":"title"}}]},"metadata":{"what_it_tests":"Sau khi user bổ sung danh sách ở lượt sau, route tới tool mới theo title."}},
+    {"id":"G10_carry_news_time","phase":"B","turns":[{"role":"user","content":"Tìm tin AI hôm nay"},{"role":"user","content":"Đổi chủ đề sang robotics, vẫn hôm nay"}],"failure_type":"wrong_arg_value","expect":{"tool_calls":[{"name":"lookup","args":{"query":"robotics","topic":"news","timeframe":"day"}}]},"metadata":{"what_it_tests":"Carry timeframe/topic và thay query ở lượt sau."}}
+  ]
 }
