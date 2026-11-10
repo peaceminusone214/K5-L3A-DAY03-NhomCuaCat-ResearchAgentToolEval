@@ -7,7 +7,7 @@
 - Repo nhóm: `K5-L3A-DAY03-NhomCuaCat-ResearchAgentToolEval`
 - URL repo: https://github.com/peaceminusone214/K5-L3A-DAY03-NhomCuaCat-ResearchAgentToolEval
 - Nhánh nộp: `main`
-- Commit chốt: `793e475`
+- Commit chốt: `3ede685`
 
 ## Thành viên
 
